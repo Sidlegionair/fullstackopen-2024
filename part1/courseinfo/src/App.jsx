@@ -1,7 +1,6 @@
 const Header = ({course}) => {
-    return (
-        <h1>{course}</h1>
-    )
+    console.log(course)
+    return <h1>{course}</h1>
 }
 
 const Part = ({part}) => {
