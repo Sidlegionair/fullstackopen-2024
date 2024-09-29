@@ -10,8 +10,12 @@ const App = () => {
         event.preventDefault()
         const newPerson = { name: newName }
 
-        // Add the new person to the persons array
-        setPersons(persons.concat(newPerson))
+        // Add the new person to the persons array if the name is not already present
+        if (!persons.some(person => person.name === newName)) {
+            setPersons(persons.concat(newPerson))
+        } else {
+            alert(`${newName} is already added to the phonebook`)
+        }
 
         // Clear the input after adding
         setNewName('')
